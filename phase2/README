@@ -1,0 +1,140 @@
+***INSTRUCTIONS FOR USE***
+
+Run the program as a project from phase2 rather than group_0349 so that files are made in the correct place.
+
+SETUP:
+  - When the system is started for the first time, you will be prompted to initialize the bank manager's account.
+  - Once the manager's account has been initialized, the login screen will be displayed.
+  - The manager then should log in and set the system time, as well as create accounts for any current employees.
+
+NEW CUSTOMERS:
+  - New customers can request an account from the login screen by typing their desired username in the username field
+    and clicking "Request User Creation".
+  - A manager or employee will then be able to see the request and create the account. The administrator who creates the
+    account can use the requested username, or may decide to use a different one in the case of a conflict or other
+    circumstances.
+  - Once the account has been created, the customer will be able to log in. The customer should be notified of the
+    successful account creation and given their initial login information.
+
+CREATING USER ACCOUNTS:
+  - From the "Check Requests" option, an administrator can select a request for a new customer account and click
+    "Check". After setting a username and password for the account, and clicking "Create", the account will be created.
+  - The manager may also select the option "Add Employee" from their main menu screen. After inputting the new account's
+    login information, the employee's account will be created.
+  - All user accounts start with a checking account with balance $0 set as their primary checking account.
+
+The system shuts down automatically at 11:59PM each day.
+
+
+***USER ACCOUNTS***
+
+Manager:
+  - Has administrator access.
+  - Can restock the atm's bills, as well as add employees.
+
+Employee:
+  - Has administrator access as well as customer functions.
+  - When logging in, choose whether to log in as a customer or as an administrator.
+
+Customer:
+  - Has base customer account functions.
+
+
+***UNIVERSAL OPTIONS***
+All account types are able to select the option to change their password from the menu screen.
+
+
+***CUSTOMER OPTIONS***
+After logging in, a customer may choose to see their summary, see their net total, request to open an account, or make a
+transaction.
+
+SUMMARY & NET TOTAL:
+  - Summary allows the user to select any of their accounts from a drop-down list and see the balance, date of creation,
+    and details about the account's most recent transaction.
+  - Net total displays the user's net total.
+
+REQUESTING TO OPEN AN ACCOUNT:
+  - The customer will be prompted to select which type of account they wish to make.
+  - If the customer selects "Request Joint Account", they will be asked to enter the username and password of the user
+    they wish to open the account with.
+  - The request will be sent to the administrators' request list, and the account will be created as soon as an admin
+    grants the request.
+
+MAKING A TRANSACTION:
+  - The customer will first be prompted to enter an amount of money and click "Check".
+  - If they have entered a valid amount, they are prompted to select the account they wish to transfer from/to.
+  - Once they have selected an account, the customer chooses which type of transaction they wish to make:
+    - Withdraw money
+    - Transfer money to another account
+    - Pay bill
+
+Transferring to Another Account
+  - If the opts to transfer money to another account, they are prompted to select a user to transfer to, and then must
+    select the to-account from the list of accounts belonging to that user.
+
+Paying a Bill:
+  - This send the money out of the bank system, represented by it going to the "Outgoing" text file.
+
+REQUESTING TRANSACTION UNDO:
+  - The customer will be prompted to select one of their accounts, and input the number of transactions they wish to
+    undo. The request is then sent to the administrators' request list.
+
+
+***ADMINISTRATOR OPTIONS***
+Administrator accounts may check the requests list and grant requests, as well as check the cash machine's alerts.
+
+CHECKING REQUESTS:
+  - The admin can select a request from the drop down list and either grant it or clear it.
+  - The types of requests are:
+    - Undoing transactions
+    - Creating a money account
+    - Creating a customer account
+  - If the request is for the creation of a customer account, the admin will then have to input a username and password
+    for the new account.
+
+ALERTS:
+  - When the cash machine has under 20 of any bill type left, it sends an alert warning that the bills of that type
+    should be restocked soon.
+
+
+***MANAGER OPTIONS***
+On top of the administrator options, the manager can also restock the cash machine, add employee accounts, and set the
+system time.
+
+RESTOCKING THE CASH MACHINE:
+  - The manager selects a denomination from the drop down list and types in an amount, and the cash machine's counter
+    for that bill type is increased by that amount. A negative number can be used if the counter is too high.
+
+ADDING EMPLOYEE ACCOUNTS:
+  - Selecting this option takes the manager to the account creation screen, where they must input a username and
+    password for the new account.
+
+SETTING SYSTEM TIME
+  - The manager can adjust the system clock here.
+
+
+***MONEY ACCOUNTS***
+When a money account is put into a state where its balance is not permitted by the rules of the account (this only
+happens when an administrator undoes transactions), the account is flagged as suspended. If a customer has a suspended
+account, they cannot request for any new money accounts to be made until the .
+
+Checking Account:
+  - Can go negative by a maximum of $100.
+
+Minimum Checking Account:
+  - Can go negative by a maximum of $100.
+  - Has a monthly fee of $5.
+  - Has a limit of 20 transactions per month.
+
+Credit Card Account:
+  - Cannot transfer money out.
+  - A maximum of $1000 in debt can be accrued.
+
+Line of Credit Account
+  - A maximum of $1000 in debt can be accrued.
+
+Savings Account:
+  - Cannot have a negative balance.
+  - At the beginning of each month, the balance is increased by an interest rate of 0.1%
+
+

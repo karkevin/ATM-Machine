@@ -1,0 +1,23 @@
+README
+General:
+- For deposits.txt, the first entry string is the amount, and the second entry string is the login name. Both of those
+can be changed to run the program. Deposits.txt ends up being top level which markus does not have, hence there are no
+ example deposit.txt(Limitation: Assume the entry for amount should be positive)
+- Run the main method in the BankDriver Class.
+
+First bank manager:
+- If you are the first user in our program, the program will prompt you to create a first bank manager.
+- Then you can input the login name and the password for the first bank manager in our program ever!
+- Then you need to login to the first bank manager by using the login name and the password you created in the previous
+step
+- Then you can choose the things you wanna do in the options menu.
+
+
+The new user account:
+- You, as a new user, will be prompted by the program to send a request about creation of the new user account.
+
+The existing user account:
+- You can login the program or send a request for the new account.
+- If you login to the existing account, then you will be prompted to the options menu.
+
+
